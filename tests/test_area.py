@@ -22,3 +22,13 @@ def test_calculate_area_square_custom_output():
 
     # Validate that the result matches the expected output
     assert result == expected_output * expected_output
+
+def test_calculate_area_square_negative_input():
+    # Choose a negative number as input
+    input_value = -5
+
+    # Calculate the area of a square using the negative input
+    result = calculate_area_square(input_value)
+
+    # This assertion will fail because the function should raise a TypeError for negative input
+    assert result == input_value * input_value
